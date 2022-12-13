@@ -12,7 +12,7 @@
 <StripeProvider>
 	<section>
 		<h2>Choose your plan and start counting!</h2>
-		<Pricing {plans} />
+		<Pricing plans={data.plans} />
 	</section>
 </StripeProvider>
 
