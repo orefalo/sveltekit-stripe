@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getContext, onMount } from 'svelte';
-	const getStripe = getContext('getStripe');
+	const getStripe = getContext('getStripe') as Function;
 	const stripe = getStripe();
 	export let plans = [];
 	function penniesToDollars(pennies: number) {
@@ -22,11 +22,6 @@
 			});
 		}
 	}
-
-	onMount(() => {
-		console.log('plans');
-		console.log(plans);
-	});
 </script>
 
 <section class="plans">

@@ -12,7 +12,7 @@
 	"devDependencies": {
 		"@stripe/stripe-js": "1.46.0",
 		"@sveltejs/adapter-node": "1.0.0-next.104",
-		"@sveltejs/kit": "1.0.0-next.584",
+		"@sveltejs/kit": "1.0.0-next.586",
 		"@types/cookie": "0.5.1",
 		"prettier": "2.8.1",
 		"prettier-plugin-svelte": "2.9.0",
@@ -29,6 +29,6 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "4.5.10",
 		"nanoid": "4.0.0",
-		"stripe": "10.6.0"
+		"stripe": "11.3.0"
 	}
 }

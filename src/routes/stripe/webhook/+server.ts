@@ -12,14 +12,13 @@ function toBuffer(ab: ArrayBuffer): Buffer {
 	return buf;
 }
 
-export const post: RequestHandler = async (event: RequestEvent) => {
+export async function post(event: RequestEvent) {
 	// export async function post(req: Request<any, { data: any; type: any }>): Promise<Response> {
 	const req = event.request;
 	// let data;
 	let eventType: string;
 	if (STRIPE_WEBHOOK_SECRET) {
 		// let event;
-
 		const _rawBody = await req.arrayBuffer();
 		const payload = toBuffer(_rawBody);
 
@@ -27,7 +26,6 @@ export const post: RequestHandler = async (event: RequestEvent) => {
 		// However, Stripe requires the exact body it sends to construct an Event
 		// To avoid unintended SvelteKit modifications, we can use this workaround:
 		// const payload = Buffer.from(req.rawBody);
-
 		const signature = req.headers.get('stripe-signature');
 		try {
 			const event = stripe.webhooks.constructEvent(payload, signature, STRIPE_WEBHOOK_SECRET);
@@ -76,4 +74,4 @@ export const post: RequestHandler = async (event: RequestEvent) => {
 			message: 'Success'
 		})
 	};
-};
+}

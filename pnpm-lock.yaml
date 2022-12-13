@@ -4,14 +4,14 @@ specifiers:
   '@fontsource/fira-mono': 4.5.10
   '@stripe/stripe-js': 1.46.0
   '@sveltejs/adapter-node': 1.0.0-next.104
-  '@sveltejs/kit': 1.0.0-next.584
+  '@sveltejs/kit': 1.0.0-next.586
   '@types/cookie': 0.5.1
   '@vitejs/plugin-basic-ssl': 1.0.1
   env-cmd: 10.1.0
   nanoid: 4.0.0
   prettier: 2.8.1
   prettier-plugin-svelte: 2.9.0
-  stripe: 10.6.0
+  stripe: 11.3.0
   svelte: 3.55.0
   svelte-check: 2.10.2
   svelte-preprocess: 5.0.0
@@ -22,12 +22,12 @@ specifiers:
 dependencies:
   '@fontsource/fira-mono': 4.5.10
   nanoid: 4.0.0
-  stripe: 10.6.0
+  stripe: 11.3.0
 
 devDependencies:
   '@stripe/stripe-js': 1.46.0
   '@sveltejs/adapter-node': 1.0.0-next.104
-  '@sveltejs/kit': 1.0.0-next.584_svelte@3.55.0+vite@4.0.1
+  '@sveltejs/kit': 1.0.0-next.586_svelte@3.55.0+vite@4.0.1
   '@types/cookie': 0.5.1
   '@vitejs/plugin-basic-ssl': 1.0.1_vite@4.0.1
   env-cmd: 10.1.0
@@ -362,8 +362,8 @@ packages:
       rollup: 3.7.4
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.584_svelte@3.55.0+vite@4.0.1:
-    resolution: {integrity: sha512-iBfrrwkza1szR1GVMorTjj1Yw3SXhDVB5MMdDzCMKqKcCwxCehQ3K6QnlmyXHtHg2qX5rfvz0cpkp0uGGmcxQw==}
+  /@sveltejs/kit/1.0.0-next.586_svelte@3.55.0+vite@4.0.1:
+    resolution: {integrity: sha512-lTYWy4voh/r4jz8qnurIATyrH2ZgHPUswYQ9KauyASSjQGYeB1TPDgwcafM/LtgMxpcvFgWsx2KeflykSHXKxg==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1104,9 +1104,9 @@ packages:
       min-indent: 1.0.1
     dev: true
 
-  /stripe/10.6.0:
-    resolution: {integrity: sha512-SjocCrgqsFA2o4iA72lTXKbcoz8AsK9OTchz+ptw5coznXucLyLcEBZ028MRh813lXMykeODFURNPSySb9dDQA==}
-    engines: {node: ^8.1 || >=10.*}
+  /stripe/11.3.0:
+    resolution: {integrity: sha512-/ZVM1dmwrSZzNvN0vIixqhN79fgW2l3qBjw57bnFr5EQcRJTQkuJw6iEgb/EKg/40i2K/lWoa4gwnQkekC326Q==}
+    engines: {node: '>=12.*'}
     dependencies:
       '@types/node': 18.11.14
       qs: 6.11.0

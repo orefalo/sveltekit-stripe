@@ -29,8 +29,9 @@ export const POST = async (event: RequestEvent) => {
 					quantity: 1
 				}
 			],
-			success_url: `http://${event.url.host}/counter?sessionId={CHECKOUT_SESSION_ID}`,
-			cancel_url: `http://${event.url.host}/`
+
+			success_url: `${event.url.origin}/?sessionId={CHECKOUT_SESSION_ID}`,
+			cancel_url: `${event.url.origin}`
 		});
 		console.log(session);
 		return json({

@@ -4,7 +4,7 @@ import { STRIPE_SECRET_KEY } from '$env/static/private';
 
 //TODO convert to sveltekit
 const stripe = new Stripe(STRIPE_SECRET_KEY, {
-	apiVersion: '2020-08-27',
+	apiVersion: '2022-08-01',
 	httpClient: Stripe.createFetchHttpClient()
 });
 
