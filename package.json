@@ -5,6 +5,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"start": "vite start",
+		"check": "svelte-check",
 		"stripe:init": "node scripts/createProductsOnStripe.js",
 		"format": "prettier --write ."
 	},
@@ -17,6 +18,7 @@
 		"prettier-plugin-svelte": "2.9.0",
 		"svelte": "3.54.0",
 		"svelte-preprocess": "5.0.0",
+		"svelte-check": "2.10.2",
 		"tslib": "2.4.1",
 		"typescript": "4.9.4",
 		"vite": "4.0.1"

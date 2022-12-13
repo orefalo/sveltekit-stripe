@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { getContext } from 'svelte';
 	const getStripe = getContext('getStripe');
 	const stripe = getStripe();

@@ -1,8 +1,7 @@
 import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
-import stripe from './checkout-session/_stripe';
+import stripe from '../checkout-session/_stripe';
 
-// todo: orefalo - properly gatekeep this variable
-const WEBHOOK_SECRET = process.env['STRIPE_WEBHOOK_SECRET'];
+import { STRIPE_WEBHOOK_SECRET } from '$env/static/public';
 
 function toBuffer(ab: ArrayBuffer): Buffer {
 	const buf = Buffer.alloc(ab.byteLength);
@@ -18,7 +17,7 @@ export const post: RequestHandler = async (event: RequestEvent) => {
 	const req = event.request;
 	// let data;
 	let eventType: string;
-	if (WEBHOOK_SECRET) {
+	if (STRIPE_WEBHOOK_SECRET) {
 		// let event;
 
 		const _rawBody = await req.arrayBuffer();
@@ -31,7 +30,7 @@ export const post: RequestHandler = async (event: RequestEvent) => {
 
 		const signature = req.headers.get('stripe-signature');
 		try {
-			const event = stripe.webhooks.constructEvent(payload, signature, WEBHOOK_SECRET);
+			const event = stripe.webhooks.constructEvent(payload, signature, STRIPE_WEBHOOK_SECRET);
 			const data = event.data;
 			eventType = event.type;
 		} catch (err) {

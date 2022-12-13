@@ -2,7 +2,10 @@
 	//	export const prerender = true;
 	import Pricing from '$lib/Pricing/index.svelte';
 	import StripeProvider from '$lib/stripe/StripeProvider.svelte';
-	export let data;
+
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>

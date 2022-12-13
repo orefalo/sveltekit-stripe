@@ -1,12 +1,10 @@
 import Stripe from 'stripe';
-import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
+import config from '../.env';
 
-dotenv.config();
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-	apiVersion: '2020-08-27'
+const stripe = new Stripe(config.STRIPE_SECRET_KEY, {
+	apiVersion: '2022-11-15'
 });
 
 const plans = [
