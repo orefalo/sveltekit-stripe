@@ -1,9 +1,8 @@
 import Stripe from 'stripe';
 import fs from 'fs';
 import path from 'path';
-import config from '../.env';
 
-const stripe = new Stripe(config.STRIPE_SECRET_KEY, {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 	apiVersion: '2022-11-15'
 });
 

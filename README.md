@@ -2,6 +2,7 @@
 
 **Update in this branch:**
 
+- well, well, well, once again SvelteKit api changed and with major changes
 - code is up to date with the latest versions of sveltekit & stripe apis
 - enjoy ;-)
 
@@ -16,17 +17,17 @@ This demo application implements subscriptions using [SvelteKit](http://kit.svel
 
 First you need to have an account on [Stripe](https://stripe.com/).
 
-- Clone or fork the project
+- Clone or fork this project
   `git clone https://github.com/srmullen/sveltekit-stripe.git`
 
 - Install the dependencies
   `cd sveltekit-stripe && npm install`
 
-- Rename `.env.example` to `.env` and update with your Stripe public and private api keys. You can get them from the Stripe dashboard.
+- Rename `.env.example` to `.env` and update it with your Stripe public and private api keys and hook. You can get them from the [Stripe dashboard](https://dashboard.stripe.com/login).
 
 - Create products and prices on Stripe, using the script provided by this repo.
   `npm run stripe:init`
-  This script creates the Stripe entities needed for a subscription billing model and writes them to a json file that will be loaded by a SvelteKit endpoint. You can also create the entites needed by using the Stripe dashboard, [following this section of the guide](https://stripe.com/docs/billing/subscriptions/checkout#create-business-model).
+  This script creates the Stripe structures needed for a subscription billing model and writes them to a json file that will be loaded by a SvelteKit endpoint. You can also create the entites needed by using the Stripe dashboard, [following this section of the guide](https://stripe.com/docs/billing/subscriptions/checkout#create-business-model).
 
 - Start up the development server
   `npm run dev`
