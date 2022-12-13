@@ -2,15 +2,15 @@
 	"name": "sveltekit-stripe",
 	"version": "0.1.0",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"start": "svelte-kit start",
+		"dev": "vite dev",
+		"build": "vite build",
+		"start": "vite start",
 		"stripe:init": "node scripts/createProductsOnStripe.js",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@stripe/stripe-js": "1.46.0",
-		"@sveltejs/adapter-node": "next",
+		"@sveltejs/adapter-node": "1.0.0-next.104",
 		"@sveltejs/kit": "1.0.0-next.584",
 		"@types/cookie": "0.5.1",
 		"prettier": "2.8.1",
