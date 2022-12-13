@@ -5,3 +5,4 @@ node_modules
 /src/routes/plansData.json
 .netlify
 /.svelte-kit
+.env
