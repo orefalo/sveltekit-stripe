@@ -11,7 +11,15 @@ const config = {
 		// By default, `npm run build` will create a standard Node app.
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
-		adapter: node()
+		adapter: node(),
+		csp: {
+			directives: {
+				// per stripe doc
+				'script-src': ['self', 'https://*.stripe.com', 'https://maps.googleapis.com'],
+				'connect-src': ['self', 'data', 'https://*.stripe.com', 'https://maps.googleapis.com'],
+				'img-src': ['self', 'https://*.stripe.com']
+			}
+		}
 	}
 };
 

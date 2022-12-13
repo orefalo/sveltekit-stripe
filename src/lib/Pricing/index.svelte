@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 	const getStripe = getContext('getStripe');
 	const stripe = getStripe();
 	export let plans = [];
@@ -22,6 +22,11 @@
 			});
 		}
 	}
+
+	onMount(() => {
+		console.log('plans');
+		console.log(plans);
+	});
 </script>
 
 <section class="plans">

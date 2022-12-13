@@ -14,7 +14,7 @@
 
 <StripeProvider>
 	<section>
-		<h2>Choose your plan and start counting!</h2>
+		<h2>Choose your subscription to start using the service!</h2>
 		<Pricing plans={data.plans} />
 	</section>
 </StripeProvider>
