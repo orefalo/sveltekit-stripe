@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
-.env
 /build
 /functions
 /src/routes/plansData.json

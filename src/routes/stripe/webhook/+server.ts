@@ -1,7 +1,7 @@
 import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
 import stripe from '../checkout-session/_stripe';
 
-import { STRIPE_WEBHOOK_SECRET } from '$env/static/public';
+import { STRIPE_WEBHOOK_SECRET } from '$env/static/private';
 
 function toBuffer(ab: ArrayBuffer): Buffer {
 	const buf = Buffer.alloc(ab.byteLength);
