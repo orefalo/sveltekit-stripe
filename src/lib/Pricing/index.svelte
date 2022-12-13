@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { getContext } from 'svelte';
 
-	const { getStripe } = getContext('stripe');
+	const { getStripe } = getContext('getStripe');
 	const stripe = getStripe();
 
 	export let plans = [];

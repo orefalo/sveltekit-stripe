@@ -14,9 +14,7 @@
 
 	let stripe: Stripe | null;
 
-	setContext('stripe', {
-		getStripe: () => stripe
-	});
+	setContext('getStripe', () => stripe);
 
 	onMount(async () => {
 		console.log('StripeProvider onload');
