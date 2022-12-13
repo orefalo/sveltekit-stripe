@@ -2,7 +2,7 @@ import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
 import stripe from './_stripe';
 import { json } from '@sveltejs/kit';
 
-export const POST = async (event: RequestEvent) => {
+export async function POST(event: RequestEvent): Promise<Response> {
 	const req = event.request;
 
 	const formData = await req.json();
@@ -44,4 +44,4 @@ export const POST = async (event: RequestEvent) => {
 			error: err
 		});
 	}
-};
+}

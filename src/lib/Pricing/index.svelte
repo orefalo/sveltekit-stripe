@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { getContext, onMount } from 'svelte';
+	import { getContext } from 'svelte';
 	const getStripe = getContext('getStripe') as Function;
 	const stripe = getStripe();
 	export let plans = [];
+
 	function penniesToDollars(pennies: number) {
 		return pennies / 100;
 	}
+
 	async function choosePlan(plan) {
 		if (plan.price.id) {
 			const res = await fetch('/stripe/checkout-session', {

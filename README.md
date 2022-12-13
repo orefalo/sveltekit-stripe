@@ -23,7 +23,7 @@ First you need to have an account on [Stripe](https://stripe.com/).
 - Install the dependencies
   `cd sveltekit-stripe && npm install`
 
-- Rename `.env.example` to `.env` and update it with your Stripe public and private api keys and hook. You can get them from the [Stripe dashboard](https://dashboard.stripe.com/login).
+- Rename `.env.example` to `.env` and update it with your Stripe public and private api keys, hook and dashboard urls. You can get them from the [Stripe dashboard](https://dashboard.stripe.com/login).
 
 - Create products and prices on Stripe, using the script provided by this repo.
   `npm run stripe:init`
@@ -32,9 +32,17 @@ First you need to have an account on [Stripe](https://stripe.com/).
 - Start up the development server
   `npm run dev`
 
+### Stripe Customer Portal
+
+Customer Portal is a Stripe-hosted portal that allows your customers to manage their subscriptions and billing details themselves.
+
+The portal provide great accelerators to offload development and deliver quickly, (more details can be found here.)[https://stripe.com/docs/customer-management/configure-portal]
+
+
+
 ### Stripe Webhooks
 
-This repo contains a SvelteKit endpoint for Stripe Webhook events.
+When customers change their subscriptions via the Stripe dashboard, the instance will receive lifecycle events via a Webhook.
 
 To test the hook locally see this guide https://stripe.com/docs/webhooks/test
 
@@ -47,3 +55,10 @@ Verify webhook signatures by adding STRIPE_WEBHOOK_SECRET to your .env file.
 https://sveltekit-stripe.netlify.app
 
 (Read more about the implementation here.)[https://www.srmullen.com/articles/sveltekit-stripe-integration]
+
+## TODO
+
+- Confirmation page
+- status page
+- Button to Stripe customer portal
+- cancel subscription

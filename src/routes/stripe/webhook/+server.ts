@@ -1,3 +1,6 @@
+// this webhookis called when the customer performs actions on stripe
+//
+
 import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
 import stripe from '../checkout-session/_stripe';
 
@@ -12,7 +15,7 @@ function toBuffer(ab: ArrayBuffer): Buffer {
 	return buf;
 }
 
-export async function post(event: RequestEvent) {
+export async function POST(event: RequestEvent) {
 	// export async function post(req: Request<any, { data: any; type: any }>): Promise<Response> {
 	const req = event.request;
 	// let data;
@@ -64,7 +67,8 @@ export async function post(event: RequestEvent) {
 			console.log('Event: invoice.payment_failed');
 			break;
 		default:
-		// Unhandled event type
+			// Unhandled event type
+			console.log(eventType);
 	}
 
 	return {
