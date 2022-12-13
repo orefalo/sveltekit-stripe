@@ -1,5 +1,5 @@
 import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
-import stripe from './_stripe';
+import stripe from '../_stripe';
 import { json } from '@sveltejs/kit';
 
 export async function POST(event: RequestEvent): Promise<Response> {

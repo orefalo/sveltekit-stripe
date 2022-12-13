@@ -1,9 +1,11 @@
+// thsi script will create test products on stripe
+
 import Stripe from 'stripe';
 import fs from 'fs';
 import path from 'path';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-	apiVersion: '2022-11-15'
+	apiVersion: process.env.STRIPE_API_VERSION
 });
 
 const plans = [

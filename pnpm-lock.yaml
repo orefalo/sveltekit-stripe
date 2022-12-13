@@ -8,6 +8,7 @@ specifiers:
   '@types/cookie': 0.5.1
   '@vitejs/plugin-basic-ssl': 1.0.1
   env-cmd: 10.1.0
+  lowdb: 5.0.5
   nanoid: 4.0.0
   prettier: 2.8.1
   prettier-plugin-svelte: 2.9.0
@@ -21,6 +22,7 @@ specifiers:
 
 dependencies:
   '@fontsource/fira-mono': 4.5.10
+  lowdb: 5.0.5
   nanoid: 4.0.0
   stripe: 11.3.0
 
@@ -801,6 +803,13 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /lowdb/5.0.5:
+    resolution: {integrity: sha512-7EWKmIMhNKA8TXFhL8t0p6N2LC53l3ZqsWQGSksGhhjrcms9rbKlyrAh2PzSGK5v0KPJ2W5VItBnC3NDRzOnzQ==}
+    engines: {node: '>=14.16'}
+    dependencies:
+      steno: 3.0.0
+    dev: false
+
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
@@ -1091,6 +1100,11 @@ packages:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
     dev: true
+
+  /steno/3.0.0:
+    resolution: {integrity: sha512-uZtn7Ht9yXLiYgOsmo8btj4+f7VxyYheMt8g6F1ANjyqByQXEE2Gygjgenp3otHH1TlHsS4JAaRGv5wJ1wvMNw==}
+    engines: {node: '>=14.16'}
+    dev: false
 
   /streamsearch/1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
