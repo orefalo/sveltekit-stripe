@@ -3,10 +3,12 @@
 	import type { Stripe } from '@stripe/stripe-js';
 	import { onMount, setContext } from 'svelte';
 
-	const STRIPE_PUBLIC_KEY = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
+	import { PUBLIC_STRIPE_PUBLIC_KEY } from '$env/static/public';
+
+	const STRIPE_PUBLIC_KEY = PUBLIC_STRIPE_PUBLIC_KEY;
 
 	if (typeof STRIPE_PUBLIC_KEY !== 'string') {
-		throw new Error('VITE_STRIPE_PUBLIC_KEY must be added to .env');
+		throw new Error('PUBLIC_STRIPE_PUBLIC_KEY must be added to .env');
 	}
 
 	// ID of the connected stripe account
