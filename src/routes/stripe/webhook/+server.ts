@@ -66,6 +66,28 @@ export async function POST(event: RequestEvent) {
 			// customer portal to update their payment information.
 			console.log('Event: invoice.payment_failed');
 			break;
+
+		case 'customer.subscription.updated':
+			// Listen to this to monitor updates to the subscription quantity.
+			// When you receive this event, check the subscription.items.data[0].quantity
+			// attribute to find the quantity the customer is subscribed to.
+			// Then, grant access to the new quantity.
+
+			console.log('Event: customer.subscription.updated');
+			break;
+		case 'customer.subscription.deleted':
+			//Listen to this to monitor subscription cancellations. When you receive this event,
+			// revoke the customer’s access to the product.If you configure the portal to cancel
+			// subscriptions at the end of a billing period, listen to the customer.subscription.
+			// updated event to be notified of cancellations before they occur.
+			// If cancel_at_period_end is true, the subscription is canceled at the end of its billing period.
+			// If a customer changes their mind, they can reactivate their subscription prior to
+			//  the end of the billing period.When they do this, a customer.subscription.updated
+			//  event is sent.Check that cancel_at_period_end is false to confirm that they
+			// reactivated their subscription.
+
+			console.log('Event: customer.subscription.deleted');
+			break;
 		default:
 			// Unhandled event type
 			console.log(eventType);

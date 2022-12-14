@@ -6,7 +6,7 @@
 		"build": "vite build",
 		"start": "vite start",
 		"check": "svelte-check",
-		"stripe:init": "env-cmd node scripts/createProductsOnStripe.js",
+		"stripe:init": "env-cmd ts-node scripts/createProductsOnStripe.js",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
