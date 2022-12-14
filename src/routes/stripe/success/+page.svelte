@@ -1,3 +1,9 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+</script>
+
 <section>
 	<div class="product Box-root">
 		<svg
@@ -23,7 +29,7 @@
 		</div>
 	</div>
 	<form action="/create-portal-session" method="POST">
-		<input type="hidden" id="session-id" name="session_id" value="" />
+		<input type="hidden" id="session-id" name="session_id" value={data.sessionId} />
 		<button id="checkout-and-portal-button" type="submit">Manage your billing information</button>
 	</form>
 </section>

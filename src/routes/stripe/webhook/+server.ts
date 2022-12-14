@@ -1,8 +1,8 @@
 // this webhookis called when the customer performs actions on stripe
 //
 
-import type { RequestEvent, RequestHandler } from '@sveltejs/kit';
-import stripe from '../_stripe';
+import type { RequestEvent } from '@sveltejs/kit';
+import { stripe } from '../_stripe';
 
 import { STRIPE_WEBHOOK_SECRET } from '$env/static/private';
 

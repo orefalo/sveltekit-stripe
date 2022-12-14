@@ -29,7 +29,7 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "4.5.10",
 		"nanoid": "4.0.0",
-		"lowdb":"5.0.5",
+		"lowdb": "5.0.5",
 		"stripe": "11.3.0"
 	}
 }

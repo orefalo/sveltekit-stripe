@@ -38,8 +38,6 @@ Customer Portal is a Stripe-hosted portal that allows your customers to manage t
 
 The portal provide great accelerators to offload development and deliver quickly, (more details can be found here.)[https://stripe.com/docs/customer-management/configure-portal]
 
-
-
 ### Stripe Webhooks
 
 When customers change their subscriptions via the Stripe dashboard, the instance will receive lifecycle events via a Webhook.
