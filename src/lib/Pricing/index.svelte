@@ -1,8 +1,9 @@
 <script lang="ts">
+	import type { Offer } from 'src/routes/+page.server';
 	import { getContext } from 'svelte';
 	const getStripe = getContext('getStripe') as Function;
 	const stripe = getStripe();
-	export let plans = [];
+	export let plans: Array<Offer> = [];
 
 	function penniesToDollars(pennies: number) {
 		return pennies / 100;

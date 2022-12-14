@@ -25,7 +25,7 @@
 			</g>
 		</svg>
 		<div class="description Box-root">
-			<h3>Subscription to Starter plan successful!</h3>
+			<h3>Subscription enrollment successful!</h3>
 		</div>
 	</div>
 	<form action="/create-portal-session" method="POST">
