@@ -10,26 +10,26 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@types/node": "18.11.15",
 		"@stripe/stripe-js": "1.46.0",
 		"@sveltejs/adapter-node": "1.0.0-next.104",
 		"@sveltejs/kit": "1.0.0-next.586",
-		"@types/cookie": "0.5.1",
+		"@vitejs/plugin-basic-ssl": "1.0.1",
 		"prettier": "2.8.1",
 		"prettier-plugin-svelte": "2.9.0",
 		"svelte": "3.55.0",
 		"svelte-preprocess": "5.0.0",
 		"svelte-check": "2.10.2",
+		"env-cmd": "10.1.0",
 		"tslib": "2.4.1",
 		"typescript": "4.9.4",
-		"vite": "4.0.1",
-		"env-cmd": "10.1.0",
-		"@vitejs/plugin-basic-ssl": "1.0.1"
+		"ts-node": "10.9.1",
+		"vite": "4.0.1"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "4.5.10",
 		"nanoid": "4.0.0",
-		"lowdb": "5.0.5",
 		"stripe": "11.3.0"
 	}
 }

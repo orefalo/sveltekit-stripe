@@ -4,17 +4,33 @@ import Stripe from 'stripe';
 import fs from 'fs';
 import path from 'path';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-	apiVersion: process.env.STRIPE_API_VERSION
+const stripeSecret = process.env.STRIPE_SECRET_KEY;
+const apiVersion = process.env.STRIPE_API_VERSION;
+
+if (!stripeSecret) {
+	console.log('STRIPE_SECRET_KEY not set');
+	process.exit(1);
+}
+
+if (!apiVersion) {
+	console.log('STRIPE_API_VERSION not set');
+	process.exit(1);
+}
+
+const stripe = new Stripe(stripeSecret, {
+	//@ts-expect-error
+	apiVersion: apiVersion
 });
 
 const plans = [
 	{
 		product: {
+			id: '',
 			name: 'Free Plan',
 			description: 'The bare minimum.'
 		},
 		price: {
+			id: '',
 			currency: 'usd',
 			unit_amount: 0,
 			recurring: {
@@ -30,10 +46,12 @@ const plans = [
 	},
 	{
 		product: {
+			id: '',
 			name: 'Basic Plan',
 			description: 'The basic services.'
 		},
 		price: {
+			id: '',
 			currency: 'usd',
 			unit_amount: 1000,
 			recurring: {
@@ -48,10 +66,12 @@ const plans = [
 	},
 	{
 		product: {
+			id: '',
 			name: 'Premium Plan',
 			description: 'Everything in the basic plan and then some.'
 		},
 		price: {
+			id: '',
 			currency: 'usd',
 			unit_amount: 1500,
 			recurring: {
@@ -83,7 +103,7 @@ async function main() {
 		JSON.stringify(plans, null, 2),
 		'utf8'
 	);
-	console.log('Products created');
+	console.log('Products configured in the application and synced with stripe');
 }
 
 main()
